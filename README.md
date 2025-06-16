@@ -23,8 +23,11 @@ overlay with global registration, right column shows overlay with chunkwise regi
 Original and zoomed views are heavily downsampled to keep size low. Download the original images 
 (<a href="#example-data">example data</a>) for best view.
 
+A four-round image registration is shown here,
 
-
+<p align="center">
+  <img src="https://github.com/SNIR-NIMH/FISH-In-Situ-Hybridization/blob/main/imgs/HCR_4_rounds-movie.gif" alt="animated" height="400"/>  
+</p>
 
 
 ## Installation
