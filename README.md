@@ -23,6 +23,10 @@ overlay with global registration, right column shows overlay with chunkwise regi
 Original and zoomed views are heavily downsampled to keep size low. Download the original images 
 (<a href="#example-data">example data</a>) for best view.
 
+
+
+
+
 ## Installation
 The scripts are written in MATLAB. Source codes are provided.
 Compiled versions are also provided if MATLAB license isn't
