@@ -5,6 +5,15 @@ The scripts provide 2D registration between large fluorescence in-situ hybridiza
 The registration is piecewise translation/rigid/affine in chunks. After the chunks are registered
 between images, they are stitched back to get a smooth representation of the image.
 
+<p align="center">
+  <img src="https://github.com/SNIR-NIMH/FISH-In-Situ-Hybridization/blob/main/imgs/original.png" height="300"/>  
+ <img src="https://github.com/SNIR-NIMH/FISH-In-Situ-Hybridization/blob/main/imgs/after_reg.png" height="300"/>  
+</p>
+Zoomed view
+<p align="center">
+  <img src="https://github.com/SNIR-NIMH/FISH-In-Situ-Hybridization/blob/main/imgs/zoom1.png" height="300"/>  
+ <img src="https://github.com/SNIR-NIMH/FISH-In-Situ-Hybridization/blob/main/imgs/zoom2.png" height="300"/>  
+</p>
 
 ## Installation
 The scripts are written in MATLAB. Source codes are provided.
@@ -73,6 +82,7 @@ Example command:
 ./FISH_registration.sh myfixedimg_round1_dapi.tif mymovingimg_round2_dapi.tif /home/user/outputfolder/   \
  chunksize 20x40 dsfactor 10:-1:2 finalreg translation initreg translation Modality monomodal overlap 0.2 quantile 0.95
 ```
+A transformation matrix in MATLAB .mat format will be created.
 Once a good registration between rounds are obtained, the other channels can be transformed using
 `FISH_transformation.sh`,
 ```
