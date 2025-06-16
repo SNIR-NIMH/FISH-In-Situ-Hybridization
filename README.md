@@ -9,16 +9,16 @@ Example: red and green shows DAPI channels between two rounds of imaging. Left c
 overlay with global registration, right column shows overlay with chunkwise registration.
 
 <p align="center">
-  <img src="https://github.com/SNIR-NIMH/FISH-In-Situ-Hybridization/blob/main/imgs/original.png" height="250"/>  
- <img src="https://github.com/SNIR-NIMH/FISH-In-Situ-Hybridization/blob/main/imgs/after_reg.png" height="250"/>  
+  <img src="https://github.com/SNIR-NIMH/FISH-In-Situ-Hybridization/blob/main/imgs/original.png" height="220"/>  
+ <img src="https://github.com/SNIR-NIMH/FISH-In-Situ-Hybridization/blob/main/imgs/after_reg.png" height="220"/>  
 </p>
 <p align="center">
-  <img src="https://github.com/SNIR-NIMH/FISH-In-Situ-Hybridization/blob/main/imgs/zoom1.png" height="250"/>  
- <img src="https://github.com/SNIR-NIMH/FISH-In-Situ-Hybridization/blob/main/imgs/zoom2.png" height="250"/>  
+  <img src="https://github.com/SNIR-NIMH/FISH-In-Situ-Hybridization/blob/main/imgs/zoom1.png" height="220"/>  
+ <img src="https://github.com/SNIR-NIMH/FISH-In-Situ-Hybridization/blob/main/imgs/zoom2.png" height="220"/>  
 </p>
 <p align="center">
-  <img src="https://github.com/SNIR-NIMH/FISH-In-Situ-Hybridization/blob/main/imgs/zoom3.png" height="250"/>  
- <img src="https://github.com/SNIR-NIMH/FISH-In-Situ-Hybridization/blob/main/imgs/zoom4.png" height="250"/>  
+  <img src="https://github.com/SNIR-NIMH/FISH-In-Situ-Hybridization/blob/main/imgs/zoom3.png" height="220"/>  
+ <img src="https://github.com/SNIR-NIMH/FISH-In-Situ-Hybridization/blob/main/imgs/zoom4.png" height="220"/>  
 </p>
 Original and zoomed views are heavily downsampled to keep size low. Download the original images for best view.
 
