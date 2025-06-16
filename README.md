@@ -20,8 +20,8 @@ overlay with global registration, right column shows overlay with chunkwise regi
   <img src="https://github.com/SNIR-NIMH/FISH-In-Situ-Hybridization/blob/main/imgs/zoom3.png" height="220"/>  
  <img src="https://github.com/SNIR-NIMH/FISH-In-Situ-Hybridization/blob/main/imgs/zoom4.png" height="220"/>  
 </p>
-Original and zoomed views are heavily downsampled to keep size low. Download the original images for best view.
-
+Original and zoomed views are heavily downsampled to keep size low. Download the original images 
+(<a href="#example-data">example data</a>) for best view.
 
 ## Installation
 The scripts are written in MATLAB. Source codes are provided.
@@ -104,8 +104,18 @@ Once a good registration between rounds are obtained, the other channels can be 
  OUTPUT     Output (.tif) image, transformed version of moving image
 ```
 
+<a name="example-data"></a>
+## Example Data:
+Example data of two rounds are provided here. Round1 and Round3 folders contain
+4 channels. The first channel (ch00) of round3 is registered to the first channel
+of round1. Then the other channels are transformed using the transformation matrix.
+```
+http://hpc.nih.gov/~NIMH_MHSNIR/FISH_shared_data1.zip
+```
+
+
 ## Notes:
-1. "Initreg" is done on the whole image to estimate the initial linear transformation.
+1. "Initreg" is used for registering the whole image to estimate the initial linear transformation.
    If the images are very big, more often that not translation or rigid works better than
    similarity (i.e., affine)
 2. If there is too much deformation, then choose higher "Overlap" and "Chunksize".
