@@ -5,15 +5,23 @@ The scripts provide 2D registration between large fluorescence in-situ hybridiza
 The registration is piecewise translation/rigid/affine in chunks. After the chunks are registered
 between images, they are stitched back to get a smooth representation of the image.
 
+Example: red and green shows DAPI channels between two rounds of imaging. Left column shows
+overlay with global registration, right column shows overlay with chunkwise registration.
+
 <p align="center">
-  <img src="https://github.com/SNIR-NIMH/FISH-In-Situ-Hybridization/blob/main/imgs/original.png" height="300"/>  
- <img src="https://github.com/SNIR-NIMH/FISH-In-Situ-Hybridization/blob/main/imgs/after_reg.png" height="300"/>  
+  <img src="https://github.com/SNIR-NIMH/FISH-In-Situ-Hybridization/blob/main/imgs/original.png" height="250"/>  
+ <img src="https://github.com/SNIR-NIMH/FISH-In-Situ-Hybridization/blob/main/imgs/after_reg.png" height="250"/>  
 </p>
-Zoomed view
 <p align="center">
-  <img src="https://github.com/SNIR-NIMH/FISH-In-Situ-Hybridization/blob/main/imgs/zoom1.png" height="300"/>  
- <img src="https://github.com/SNIR-NIMH/FISH-In-Situ-Hybridization/blob/main/imgs/zoom2.png" height="300"/>  
+  <img src="https://github.com/SNIR-NIMH/FISH-In-Situ-Hybridization/blob/main/imgs/zoom1.png" height="250"/>  
+ <img src="https://github.com/SNIR-NIMH/FISH-In-Situ-Hybridization/blob/main/imgs/zoom2.png" height="250"/>  
 </p>
+<p align="center">
+  <img src="https://github.com/SNIR-NIMH/FISH-In-Situ-Hybridization/blob/main/imgs/zoom3.png" height="250"/>  
+ <img src="https://github.com/SNIR-NIMH/FISH-In-Situ-Hybridization/blob/main/imgs/zoom4.png" height="250"/>  
+</p>
+Original and zoomed views are heavily downsampled to keep size low. Download the original images for best view.
+
 
 ## Installation
 The scripts are written in MATLAB. Source codes are provided.
@@ -104,6 +112,8 @@ Once a good registration between rounds are obtained, the other channels can be 
 3. For similar looking images (e.g. DAPI), monomodal using phase correlation (`imregcorr`) 
    as a metric works fine. If the images are not very similar, multimodal registration
    (`imregtform`) using mutual information works better
+4. Sometimes, translation is more robust that affine or rigid for "finalregtype". Try the
+   finalregtype as translation first to check if it works.
 
 
 <!-- LICENSE -->
