@@ -6,7 +6,7 @@ exe_dir=`dirname ${exe_name}`
 if [ $# -lt "3" ]; then
   echo "
   
- ./FISH_registration FIXED  MOVING  OUTPUTDIR  NAME_1 VALUE_1 ...
+ ./FISH_registration.sh FIXED  MOVING  OUTPUTDIR  NAME_1 VALUE_1 ...
  
  FIXED       Source/target/fixed image, or a folder containing multiple 2D tifs
  MOVING      Moving image, to be registered to the target fixed image. It can
@@ -16,8 +16,9 @@ if [ $# -lt "3" ]; then
  
  
  Optional name/value parameters
- CHUNKSIZE   (Optional) Chunksize, e.g. 10x10, a string separated by x. If not
-             mentioned, it will automatically be computed.
+ CHUNKSIZE   (Optional) Number of chunks in height x width, a string separated by x.
+             Example: 10x12 means 10 chunks in height and 12 chunks in width are used.
+             If not mentioned, it will automatically be computed.
  DSFACTOR    (Optional) Initial downsampling factor to try the coarse
              registration. Too high downsampling factor cause unstable
              registration. Enter a range in Matlab notation in increasing
@@ -35,6 +36,7 @@ if [ $# -lt "3" ]; then
              will be returned (useful in interactive mode).
  InitReg     (Optional) Initial registration type to estimate the proper
              downsampling factor. Default is rigid. Options are rigid/translation.
+             This is the registration done on the whole image.       
  FinalReg    (Optional) Registration type to use to register chunks. Default is
              similarity (i.e. affine). Options are similarity (affine), rigid, 
              or translation.             
@@ -46,7 +48,9 @@ if [ $# -lt "3" ]; then
              (1) may incur in bad registration.           
  Mask        (Optional) A mask image to introduce better registration  when
              there are a lot of background noise
-           
+ Quantile    (Optional) Default 0.99. An upper quantile to clamp the outlier
+             intensities. It is useful if there are a lot of outliers that can
+             cause registration problems.
              
   "
   exit 1
